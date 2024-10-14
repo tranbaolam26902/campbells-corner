@@ -6,7 +6,7 @@ import localFont from 'next/font/local';
 import './globals.css';
 
 // components
-import { Header, Container, Footer } from '@/components/shared';
+import { Header, Footer } from '@/components/shared';
 
 const futuraFont = localFont({
     src: [
@@ -64,7 +64,7 @@ export default function RootLayout({
         <html lang='en'>
             <body className={`${futuraFont.variable} antialiased`}>
                 <Header />
-                <Container>{children}</Container>
+                {children}
                 <Footer />
             </body>
         </html>
