@@ -34,7 +34,7 @@ const navLinks: Array<NavLink> = [
 
 export default function Header() {
     return (
-        <header className='sticky top-0 bg-white bg-opacity-40 backdrop-blur'>
+        <header className='sticky top-0 z-10 bg-white bg-opacity-40 backdrop-blur'>
             <nav className='mx-auto flex h-12 items-center justify-between px-4 py-3 sm:max-w-xl md:max-w-2xl lg:max-w-3xl'>
                 <Link href='/'>
                     <Image
