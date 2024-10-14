@@ -13,7 +13,7 @@ export default function IntroduceSection({
     return (
         <section>
             <SectionHeader header={header} />
-            <p className='break-words text-justify font-medium'>{content}</p>
+            <p className='break-words text-justify'>{content}</p>
         </section>
     );
 }

@@ -20,7 +20,7 @@ export default function BioSection() {
                 {bio.map((item, index) => (
                     <li
                         key={index}
-                        className='flex gap-x-4 break-words text-justify font-medium'
+                        className='flex gap-x-4 break-words text-justify'
                     >
                         <span>{item.time}</span>
                         <span>{item.info}</span>
