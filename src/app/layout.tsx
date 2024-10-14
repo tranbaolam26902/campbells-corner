@@ -2,6 +2,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import NextTopLoader from 'nextjs-toploader';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 // styles
 import './globals.css';
@@ -68,6 +69,7 @@ export default function RootLayout({
                 <Header />
                 {children}
                 <Footer />
+                <SpeedInsights />
             </body>
         </html>
     );
