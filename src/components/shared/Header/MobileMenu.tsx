@@ -26,9 +26,11 @@ export default function MobileMenu({ navLinks }: MobileMenuProps) {
     // event handlers
     const handleOpen = () => {
         setShowMenu(true);
+        document.body.style.overflow = 'hidden';
     };
     const handleClose = () => {
         setShowMenu(false);
+        document.body.style.overflow = '';
     };
 
     return (
