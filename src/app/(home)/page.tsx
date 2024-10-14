@@ -23,7 +23,7 @@ export default function Page() {
             <BioSection />
             <IntroduceSection
                 header='Interests'
-                content='Art, Design, Game, Motorcycle, Piano, and Customize “Everything”.'
+                content='Art, Design, Esports, Motorcycle, Piano, and Customize “Everything”.'
             />
         </>
     );
