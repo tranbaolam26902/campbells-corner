@@ -8,6 +8,15 @@ const config: Config = {
     ],
     theme: {
         extend: {
+            keyframes: {
+                'grow-width': {
+                    '0%': { width: '0' },
+                    '100%': { width: '100%' }
+                }
+            },
+            animation: {
+                typewriter: 'grow-width 2s forwards'
+            },
             fontFamily: {
                 futura: ['var(--font-futura)']
             },
