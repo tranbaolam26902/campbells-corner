@@ -1,6 +1,7 @@
 // packages
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import NextTopLoader from 'nextjs-toploader';
 
 // styles
 import './globals.css';
@@ -63,6 +64,7 @@ export default function RootLayout({
     return (
         <html lang='en'>
             <body className={`${futuraFont.variable} antialiased`}>
+                <NextTopLoader color='#92e3a4' height={4} showSpinner={false} />
                 <Header />
                 {children}
                 <Footer />
