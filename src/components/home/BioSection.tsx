@@ -18,7 +18,10 @@ export default function BioSection() {
             <SectionHeader header='Bio' />
             <ul>
                 {bio.map((item, index) => (
-                    <li key={index} className='flex gap-x-4 font-medium'>
+                    <li
+                        key={index}
+                        className='flex gap-x-4 break-words text-justify font-medium'
+                    >
                         <span>{item.time}</span>
                         <span>{item.info}</span>
                     </li>
