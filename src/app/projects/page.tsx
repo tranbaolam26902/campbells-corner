@@ -31,7 +31,7 @@ export default function Page() {
             <div className='flex flex-col gap-y-16'>
                 <section>
                     <SectionHeader header='Client projects' />
-                    <ul className='mt-4 grid gap-4 sm:grid-cols-2'>
+                    <ul className='mt-4 grid gap-x-4 gap-y-8 sm:grid-cols-2'>
                         {clientProjects.map((project: Project) => (
                             <ProjectItem key={project.slug} project={project} />
                         ))}
@@ -40,7 +40,7 @@ export default function Page() {
 
                 <section>
                     <SectionHeader header='Side projects' />
-                    <ul className='mt-4 grid gap-4 sm:grid-cols-2'>
+                    <ul className='mt-4 grid gap-x-4 gap-y-8 sm:grid-cols-2'>
                         {sideProjects.map((project) => (
                             <ProjectItem key={project.slug} project={project} />
                         ))}
