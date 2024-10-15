@@ -15,9 +15,10 @@ export default function Page() {
                 <Avatar />
                 <MessageDialog
                     messages={[
-                        'Curious about the tech gear I use?',
-                        'Check back soon for detailed reviews and insights!'
+                        "I'm currently updating my tech gear list,",
+                        "stay tuned for what's coming!"
                     ]}
+                    arrow='top'
                 />
             </section>
             <section>

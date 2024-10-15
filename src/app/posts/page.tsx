@@ -15,9 +15,10 @@ export default function Page() {
                 <Avatar />
                 <MessageDialog
                     messages={[
-                        'Looks like I haven’t posted anything yet.',
-                        'But I can’t wait to share my thoughts with you soon! Stay tuned!'
+                        "I don't have any posts yet,",
+                        "but I'll be sharing soon. Stay tuned!"
                     ]}
+                    arrow='top'
                 />
             </section>
             <section>
