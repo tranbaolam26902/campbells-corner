@@ -4,7 +4,7 @@ import SectionHeader from './SectionHeader';
 const bio = [
     {
         time: '2002',
-        info: 'Born in Dalat City, Vietnam'
+        info: 'Born in Dalat City, Vietnam.'
     },
     {
         time: '2024',
