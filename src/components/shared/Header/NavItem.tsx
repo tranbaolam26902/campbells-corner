@@ -15,6 +15,7 @@ export function NavItem({ href, name }: NavItemProps) {
 
     return (
         <Link
+            role='menuitem'
             href={href}
             className={`rounded px-2 font-medium underline-offset-4 ${pathname === href ? 'bg-accent-200' : 'hover:underline'}`}
         >
@@ -28,6 +29,7 @@ export function MobileNavItem({ href, name, onClick }: NavItemProps) {
 
     return (
         <Link
+            role='menuitem'
             href={href}
             className={`px-4 py-2 text-left font-medium underline-offset-4 ${pathname === href ? 'bg-accent-200' : 'hover:bg-gray-100'}`}
             onClick={onClick}

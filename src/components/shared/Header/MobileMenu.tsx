@@ -57,6 +57,7 @@ export default function MobileMenu({ navLinks }: MobileMenuProps) {
                             onClick={handleClose}
                         ></motion.div>
                         <motion.nav
+                            role='navigation'
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
