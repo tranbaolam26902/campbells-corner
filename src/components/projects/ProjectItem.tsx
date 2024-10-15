@@ -15,7 +15,7 @@ export default function ProjectItem({ project }: ProjectItemProps) {
             <Link href={`/projects/${project.slug}`}>
                 <Image
                     src={project.previewImg}
-                    alt={project.name}
+                    alt=''
                     width={1926}
                     height={1123}
                     priority
