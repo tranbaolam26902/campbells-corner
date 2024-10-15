@@ -11,6 +11,7 @@ body {
     color: var(--ebony);
     background: var(--background);
     font-family: var(--font-futura);
+    font-size: 1.125rem;
 }
 
 /* reusable classes */
