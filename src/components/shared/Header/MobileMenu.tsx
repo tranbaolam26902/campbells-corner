@@ -53,11 +53,9 @@ export default function MobileMenu({ navLinks }: MobileMenuProps) {
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.2 }}
                             className='fixed left-0 top-0 h-screen w-screen bg-black/20'
-                            role='button'
                             onClick={handleClose}
                         ></motion.div>
                         <motion.nav
-                            role='navigation'
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
