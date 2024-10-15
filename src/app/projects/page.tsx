@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 // components
 import { ProjectItem } from '@/components/projects';
-import { Avatar, MessageDialog } from '@/components/shared';
+import { Avatar, MessageDialog, SectionHeader } from '@/components/shared';
 
 // hooks
 import useFetchProjects from '@/hooks/useFetchProjects';
@@ -28,27 +28,25 @@ export default function Page() {
                 />
             </section>
 
-            <section>
-                <h1 className='mb-4 text-center font-semibold'>
-                    Client projects
-                </h1>
-                <ul className='grid gap-4 sm:grid-cols-2'>
-                    {clientProjects.map((project: Project) => (
-                        <ProjectItem key={project.slug} project={project} />
-                    ))}
-                </ul>
-            </section>
+            <div className='flex flex-col gap-y-16'>
+                <section>
+                    <SectionHeader header='Client projects' />
+                    <ul className='mt-4 grid gap-4 sm:grid-cols-2'>
+                        {clientProjects.map((project: Project) => (
+                            <ProjectItem key={project.slug} project={project} />
+                        ))}
+                    </ul>
+                </section>
 
-            <section>
-                <h1 className='mb-4 text-center font-semibold'>
-                    Side projects
-                </h1>
-                <ul className='grid gap-4 sm:grid-cols-2'>
-                    {sideProjects.map((project) => (
-                        <ProjectItem key={project.slug} project={project} />
-                    ))}
-                </ul>
-            </section>
+                <section>
+                    <SectionHeader header='Side projects' />
+                    <ul className='mt-4 grid gap-4 sm:grid-cols-2'>
+                        {sideProjects.map((project) => (
+                            <ProjectItem key={project.slug} project={project} />
+                        ))}
+                    </ul>
+                </section>
+            </div>
         </>
     );
 }

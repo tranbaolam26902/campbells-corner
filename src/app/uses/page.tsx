@@ -2,7 +2,7 @@
 import type { Metadata } from 'next';
 
 // components
-import { Avatar, MessageDialog } from '@/components/shared';
+import { Avatar, MessageDialog, SectionHeader } from '@/components/shared';
 
 export const metadata: Metadata = {
     title: 'Uses'
@@ -21,8 +21,9 @@ export default function Page() {
                     arrow='top'
                 />
             </section>
+
             <section>
-                <h1 className='text-center font-semibold'>Uses</h1>
+                <SectionHeader header='Uses' />
             </section>
         </>
     );

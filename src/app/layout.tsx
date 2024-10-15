@@ -66,7 +66,7 @@ export default function RootLayout({
     return (
         <html lang='en'>
             <body className={`${futuraFont.variable} antialiased`}>
-                <NextTopLoader color='#ffb7a8' showSpinner={false} />
+                <NextTopLoader color='#ffd1c8' showSpinner={false} />
                 <Header />
                 {children}
                 <Footer />

@@ -1,5 +1,5 @@
 // components
-import SectionHeader from './SectionHeader';
+import { SectionHeader } from '@/components/shared';
 
 const bio = [
     {

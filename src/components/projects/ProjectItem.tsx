@@ -21,7 +21,7 @@ export default function ProjectItem({ project }: ProjectItemProps) {
                     priority
                     className='rounded-md object-cover'
                 />
-                <h2 className='mt-1 font-medium'>{project.name}</h2>
+                <h2 className='mt-2 font-medium'>{project.name}</h2>
             </Link>
             {project.desc && <p>{project.desc}</p>}
         </li>

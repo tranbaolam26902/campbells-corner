@@ -10,7 +10,7 @@ export default function useFetchProjects() {
             desc: 'A system that simulates regional lessons through virtual tours'
         },
         {
-            name: 'DLU IT Department website',
+            name: 'DLU IT Department Website',
             slug: 'dlu-it-department-website',
             previewImg: '/images/projects/dlu-it-department-thumbnail.png',
             desc: 'News & Announcements website'
@@ -24,7 +24,7 @@ export default function useFetchProjects() {
             desc: 'An e-commerce website for a fashion accessories store'
         },
         {
-            name: 'Crypto currency swapper',
+            name: 'Crypto Currency Swapper',
             slug: 'dlu-it-department-website',
             previewImg: '/images/projects/currency-swapper-thumbnail.png',
             desc: 'Simple crypto currency swap form'

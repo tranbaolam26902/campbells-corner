@@ -1,5 +1,5 @@
 // components
-import SectionHeader from './SectionHeader';
+import { SectionHeader } from '@/components/shared';
 
 interface IntroduceSectionProps {
     header: string;
@@ -13,7 +13,7 @@ export default function IntroduceSection({
     return (
         <section>
             <SectionHeader header={header} />
-            <p className='break-words text-justify'>{content}</p>
+            <p className='break-words text-justify indent-4'>{content}</p>
         </section>
     );
 }
