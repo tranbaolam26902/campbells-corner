@@ -19,8 +19,8 @@ const navLinks: Array<NavLink> = [
         name: 'Home'
     },
     {
-        href: '/works',
-        name: 'Works'
+        href: '/projects',
+        name: 'Projects'
     },
     {
         href: '/posts',
