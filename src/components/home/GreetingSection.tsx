@@ -11,6 +11,7 @@ export default function GreetingSection() {
                 </h1>
                 <MessageDialog
                     messages={['Hi, welcome to my space on the internet!']}
+                    arrow='left'
                 />
             </div>
         </section>
