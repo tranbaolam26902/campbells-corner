@@ -2,6 +2,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import NextTopLoader from 'nextjs-toploader';
+import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 // styles
@@ -69,6 +70,7 @@ export default function RootLayout({
                 <Header />
                 {children}
                 <Footer />
+                <Analytics />
                 <SpeedInsights />
             </body>
         </html>
