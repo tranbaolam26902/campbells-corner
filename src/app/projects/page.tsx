@@ -5,10 +5,8 @@ import type { Metadata } from 'next';
 import { ProjectItem } from '@/components/projects';
 import { Avatar, MessageDialog, SectionHeader } from '@/components/shared';
 
-// hooks
-import useFetchProjects from '@/hooks/useFetchProjects';
-
 // libs
+import { getProjects } from '@/libs/data';
 import { Project } from '@/libs/definitions';
 
 export const metadata: Metadata = {
@@ -16,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-    const { clientProjects, sideProjects } = useFetchProjects();
+    const { clientProjects, sideProjects } = getProjects();
 
     return (
         <>

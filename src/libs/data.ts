@@ -1,7 +1,7 @@
 // libs
-import { Project } from '@/libs/definitions';
+import { Project } from './definitions';
 
-export default function useFetchProjects() {
+export const getProjects = () => {
     const clientProjects: Array<Project> = [
         {
             name: 'Regional Education System',
@@ -32,4 +32,14 @@ export default function useFetchProjects() {
     ];
 
     return { clientProjects, sideProjects };
-}
+};
+
+export const getProjectBySlug = (slug: string) => {
+    const { clientProjects, sideProjects } = getProjects();
+
+    return (
+        [...clientProjects, ...sideProjects].find(
+            (project) => project.slug === slug
+        ) || null
+    );
+};
