@@ -1,8 +1,8 @@
 // packages
 import { notFound } from 'next/navigation';
 
-// components
-import { SectionHeader } from '@/components/shared';
+// contents
+import { projects } from '@/content/index';
 
 // libs
 import { getProjectBySlug } from '@/libs/data';
@@ -12,9 +12,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
     if (project === null) notFound();
 
-    return (
-        <>
-            <SectionHeader header={project.name} />
-        </>
-    );
+    const Content = projects[project.slug];
+
+    return <Content />;
 }

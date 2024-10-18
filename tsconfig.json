@@ -22,6 +22,7 @@
       }
     ],
     "paths": {
+      "@/content/*": ["./content/*"],
       "@/public/*": ["./public/*"],
       "@/*": ["./src/*"],
       "@/components": ["./src/components/*"],
