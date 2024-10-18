@@ -64,7 +64,7 @@ export function mapFilesIntoObjects(url: string): Array<Post> {
                 name,
                 slug: fileName,
                 path,
-                previewImg: `/images${url}/${fileName}-thumbnail.png`
+                previewImg: `/images${url}/${fileName.toLowerCase()}-thumbnail.png`
             };
         });
 
