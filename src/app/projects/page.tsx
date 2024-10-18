@@ -5,16 +5,18 @@ import type { Metadata } from 'next';
 import { ProjectItem } from '@/components/projects';
 import { Avatar, MessageDialog, SectionHeader } from '@/components/shared';
 
+// hooks
+import { useFetchProjects } from '@/hooks/useFetchProjects';
+
 // libs
-import { getProjects } from '@/libs/data';
-import { Project } from '@/libs/definitions';
+import { Post } from '@/libs/definitions';
 
 export const metadata: Metadata = {
     title: 'Projects'
 };
 
 export default function Page() {
-    const { clientProjects, sideProjects } = getProjects();
+    const { clientProjects, sideProjects } = useFetchProjects();
 
     return (
         <>
@@ -30,7 +32,7 @@ export default function Page() {
                 <section>
                     <SectionHeader header='Client projects' />
                     <ul className='mt-4 grid gap-x-4 gap-y-8 sm:grid-cols-2'>
-                        {clientProjects.map((project: Project) => (
+                        {clientProjects.map((project: Post) => (
                             <ProjectItem key={project.slug} project={project} />
                         ))}
                     </ul>
@@ -39,7 +41,7 @@ export default function Page() {
                 <section>
                     <SectionHeader header='Side projects' />
                     <ul className='mt-4 grid gap-x-4 gap-y-8 sm:grid-cols-2'>
-                        {sideProjects.map((project) => (
+                        {sideProjects.map((project: Post) => (
                             <ProjectItem key={project.slug} project={project} />
                         ))}
                     </ul>

@@ -1,20 +1,27 @@
 // packages
 import { notFound } from 'next/navigation';
 
-// contents
-import { projects } from '@/content/index';
+// components
+import { Markdown } from '@/components/shared';
 
-// libs
-import { getProjectBySlug } from '@/libs/data';
+// hooks
+import { useFetchProjects } from '@/hooks/useFetchProjects';
 
-export default function Page({ params }: { params: { slug: string } }) {
-    const project = getProjectBySlug(params.slug);
+// utils
+import { readFileContent } from '@/utils/content-file-utils';
+
+interface Props {
+    params: {
+        slug: string;
+    };
+}
+
+export default function Page({ params }: Props) {
+    const { project } = useFetchProjects(params.slug);
 
     if (project === null) notFound();
 
-    const Content = projects[project.slug];
+    const source = readFileContent(project.path);
 
-    if (!Content) notFound();
-
-    return <Content />;
+    return <Markdown source={source} />;
 }

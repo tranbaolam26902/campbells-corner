@@ -5,11 +5,11 @@ export interface NavLink {
     name: string;
 }
 
-export interface Project {
+export interface Post {
     name: string;
     slug: string;
+    path: string;
     previewImg: string;
-    desc?: string;
 }
 
 export interface MDXContentDictionary {
