@@ -5,18 +5,18 @@ import Image from 'next/image';
 export function useMDXComponents(components: MDXComponents): MDXComponents {
     return {
         h1: ({ children }) => (
-            <h1 className='text-center text-3xl font-semibold'>{children}</h1>
-        ),
-        h2: ({ children }) => (
-            <h2
+            <h1
                 style={{ fontSize: '1.5rem' }}
                 className='text-center font-semibold'
             >
                 {children}
-            </h2>
+            </h1>
+        ),
+        h2: ({ children }) => (
+            <h2 className='text-center text-xl font-semibold'>{children}</h2>
         ),
         h3: ({ children }) => (
-            <h3 className='text-center text-xl font-semibold'>{children}</h3>
+            <h3 className='text-center font-semibold'>{children}</h3>
         ),
         p: ({ children }) => (
             <p className='break-words text-justify indent-4'>{children}</p>
