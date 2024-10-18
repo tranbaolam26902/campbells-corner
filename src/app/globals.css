@@ -7,6 +7,10 @@
     --background: #fff1e6;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--ebony);
     background: var(--background);
