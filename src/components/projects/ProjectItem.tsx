@@ -13,16 +13,16 @@ export default function ProjectItem({ project }: ProjectItemProps) {
     return (
         <li className='text-center'>
             <Link href={`/projects/${project.slug}`}>
-                <div className='relative overflow-hidden rounded-md'>
+                <div className='relative'>
                     <Image
                         src={project.previewImg}
                         alt='thumbnail'
                         width={2560}
                         height={1440}
                         priority
-                        className='object-cover shadow'
+                        className='rounded-lg'
                     />
-                    <div className='absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-3xl font-bold uppercase leading-10 text-white drop-shadow-md'>
+                    <div className='absolute inset-0 flex items-center justify-center rounded-lg bg-black bg-opacity-50 text-3xl font-bold uppercase leading-10 text-white drop-shadow-md'>
                         {project.name}
                     </div>
                 </div>

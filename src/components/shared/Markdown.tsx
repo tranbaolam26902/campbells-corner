@@ -51,7 +51,7 @@ export default function Markdown({ source }: MarkdownProps) {
                         alt='showcase image'
                         width={2560}
                         height={1440}
-                        className='h-auto w-full rounded-lg shadow'
+                        className='h-auto w-full rounded-xl shadow'
                         priority
                     />
                 )
