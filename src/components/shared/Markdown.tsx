@@ -48,9 +48,9 @@ export default function Markdown({ source }: MarkdownProps) {
                 img: (props) => (
                     <Image
                         src={props.src || ''}
-                        alt=''
+                        alt='showcase image'
                         width={2560}
-                        height={1536}
+                        height={1440}
                         className='h-auto w-full rounded-lg shadow'
                         priority
                     />
