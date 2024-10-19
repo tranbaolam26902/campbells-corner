@@ -2,7 +2,7 @@
 import { notFound } from 'next/navigation';
 
 // components
-import { Markdown } from '@/components/shared';
+import { Back, Markdown } from '@/components/shared';
 
 // hooks
 import { useFetchProjects } from '@/hooks/useFetchProjects';
@@ -23,5 +23,10 @@ export default function Page({ params }: Props) {
 
     const source = readFileContent(project.path);
 
-    return <Markdown source={source} />;
+    return (
+        <>
+            <Back />
+            <Markdown source={source} />
+        </>
+    );
 }
