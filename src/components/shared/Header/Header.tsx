@@ -65,7 +65,7 @@ export default function Header() {
                 >
                     <Image
                         src={github}
-                        alt='github profile'
+                        alt='github logo'
                         className='h-6 w-auto'
                         priority
                     />

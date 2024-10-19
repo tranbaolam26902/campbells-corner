@@ -38,7 +38,7 @@ export default function MobileMenu({ navLinks }: MobileMenuProps) {
             <button type='button' onClick={handleOpen}>
                 <Image
                     src='/icons/menu.svg'
-                    alt='menu'
+                    alt='menu icon'
                     width={24}
                     height={24}
                 />
@@ -69,7 +69,7 @@ export default function MobileMenu({ navLinks }: MobileMenuProps) {
                             >
                                 <Image
                                     src='/icons/close.svg'
-                                    alt='close menu'
+                                    alt='close icon'
                                     width={20}
                                     height={20}
                                 />
@@ -92,7 +92,7 @@ export default function MobileMenu({ navLinks }: MobileMenuProps) {
                             >
                                 <Image
                                     src={github}
-                                    alt='github profile'
+                                    alt='github logo'
                                     className='h-6 w-auto'
                                 />
                             </Link>

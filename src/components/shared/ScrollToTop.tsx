@@ -42,7 +42,7 @@ export default function ScrollToTop() {
                 >
                     <Image
                         src='/icons/arrow-up.svg'
-                        alt='scroll to top'
+                        alt='arrow up icon'
                         width={24}
                         height={24}
                     />
