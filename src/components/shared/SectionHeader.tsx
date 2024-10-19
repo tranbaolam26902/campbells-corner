@@ -3,5 +3,7 @@ interface SectionHeaderProps {
 }
 
 export default function SectionHeader({ header }: SectionHeaderProps) {
-    return <h2 className='mb-2 text-center text-xl font-semibold'>{header}</h2>;
+    return (
+        <h2 className='mb-2 text-center text-2xl font-semibold'>{header}</h2>
+    );
 }

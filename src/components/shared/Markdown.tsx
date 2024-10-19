@@ -12,17 +12,19 @@ export default function Markdown({ source }: MarkdownProps) {
             source={source}
             components={{
                 h1: ({ children }) => (
-                    <h1 className='text-center text-2xl font-semibold'>
+                    <h1 className='text-center text-3xl font-semibold'>
                         {children}
                     </h1>
                 ),
                 h2: ({ children }) => (
-                    <h2 className='text-center text-xl font-semibold'>
+                    <h2 className='text-center text-2xl font-semibold'>
                         {children}
                     </h2>
                 ),
                 h3: ({ children }) => (
-                    <h3 className='text-center font-semibold'>{children}</h3>
+                    <h3 className='text-center text-xl font-semibold'>
+                        {children}
+                    </h3>
                 ),
                 p: ({ children }) => (
                     <p className='break-words text-justify indent-4'>

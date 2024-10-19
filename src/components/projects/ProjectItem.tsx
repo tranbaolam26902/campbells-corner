@@ -26,7 +26,7 @@ export default function ProjectItem({ project }: ProjectItemProps) {
                         {project.name}
                     </div>
                 </div>
-                <h2 className='mt-2 font-medium'>{project.name}</h2>
+                <h3 className='mt-2 text-xl font-medium'>{project.name}</h3>
             </Link>
         </li>
     );
