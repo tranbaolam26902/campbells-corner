@@ -9,7 +9,7 @@ import { Post } from '@/libs/definitions';
  * File name structure: [index].[file-name].[extension]
  *
  * @param {string} fileName - The name of the file, including its extension.
- * @returns {string} - The file name without the extension.
+ * @returns {string} - The file index.
  */
 export function getFileIndex(fileName: string): string {
     return fileName.split('.')[0];
@@ -20,7 +20,7 @@ export function getFileIndex(fileName: string): string {
  * File name structure: [index].[file-name].[extension]
  *
  * @param {string} fileName - The name of the file, including its index and extension.
- * @returns {string} File name without extension.
+ * @returns {string} The file name without extension.
  */
 export function getFileName(fileName: string): string {
     return fileName.split('.')[1];
