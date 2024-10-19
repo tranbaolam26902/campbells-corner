@@ -49,10 +49,9 @@ export default function Markdown({ source }: MarkdownProps) {
                     <Image
                         src={props.src || ''}
                         alt=''
-                        sizes='100vw'
-                        width={1926}
-                        height={1123}
-                        className='h-auto w-full rounded-lg'
+                        width={2560}
+                        height={1536}
+                        className='h-auto w-full rounded-lg shadow'
                         priority
                     />
                 )

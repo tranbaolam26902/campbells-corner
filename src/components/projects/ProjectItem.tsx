@@ -19,7 +19,7 @@ export default function ProjectItem({ project }: ProjectItemProps) {
                     width={1926}
                     height={1123}
                     priority
-                    className='rounded-md object-cover'
+                    className='rounded-md object-cover shadow'
                 />
                 <h2 className='mt-2 font-medium'>{project.name}</h2>
             </Link>
