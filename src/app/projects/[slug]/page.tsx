@@ -27,9 +27,9 @@ export function generateMetadata({ params }: Props): Metadata {
 
     return {
         title: project.name,
-        description: `Detailed information and showcases of ${project.name} project.`,
+        description: `Detailed information and showcases of the ${project.name} project.`,
         openGraph: {
-            images: [project.previewImg]
+            images: project.previewImg
         }
     };
 }
