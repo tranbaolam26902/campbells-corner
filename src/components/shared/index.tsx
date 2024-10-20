@@ -4,5 +4,6 @@ export { default as Back } from './Back';
 export { default as Footer } from './Footer';
 export { default as Markdown } from './Markdown';
 export { default as MessageDialog } from './MessageDialog';
+export { default as Modal } from './Modal';
 export { default as ScrollToTop } from './ScrollToTop';
 export { default as SectionHeader } from './SectionHeader';
