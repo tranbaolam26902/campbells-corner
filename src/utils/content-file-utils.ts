@@ -8,8 +8,8 @@ import { Post } from '@/libs/definitions';
  * Extracts the index from a given file name.
  * File name structure: [index].[file-name].[extension]
  *
- * @param {string} fileName - The name of the file, including its extension.
- * @returns {string} - The file index.
+ * @param {string} fileName - The name of the file, including its index and extension.
+ * @returns {string} The file index.
  */
 export function getFileIndex(fileName: string): string {
     return fileName.split('.')[0];
@@ -32,7 +32,7 @@ export function getFileName(fileName: string): string {
  * hyphens with spaces.
  *
  * @param {string} fileName - The hyphenated file name to convert.
- * @returns {string} - The converted human-readable name.
+ * @returns {string} The converted human-readable name.
  */
 export function convertFileNameIntoName(fileName: string): string {
     return fileName
@@ -49,22 +49,22 @@ export function convertFileNameIntoName(fileName: string): string {
  * a preview image path. The file name is expected to follow a specific
  * format to derive the name and slug.
  *
- * @param {string} url - The relative URL of the directory containing the files.
- * @returns {Array<Post>} - An array of Post objects representing the files.
+ * @param {string} path - The relative path of the directory containing the files.
+ * @returns {Array<Post>} An array of Post objects representing the files.
  */
-export function mapFilesIntoObjects(url: string): Array<Post> {
+export function mapFilesIntoPosts(path: string): Array<Post> {
     const postItems = fs
-        .readdirSync(process.cwd() + '/content' + url)
+        .readdirSync(process.cwd() + '/content' + path)
         .map((file) => {
             const fileName = getFileName(file);
             const name = convertFileNameIntoName(fileName);
-            const path = process.cwd() + `/content${url}/${file}`;
+            const filePath = process.cwd() + `/content${path}/${file}`;
 
             return {
                 name,
                 slug: fileName,
-                path,
-                previewImg: `/images${url}/${fileName.toLowerCase()}-thumbnail.png`
+                path: filePath,
+                previewImg: `/images${path}/${fileName.toLowerCase()}-thumbnail.png`
             };
         });
 
@@ -72,15 +72,15 @@ export function mapFilesIntoObjects(url: string): Array<Post> {
 }
 
 /**
- * Reads the content of a file located at the specified URL.
+ * Reads the content of a file located at the specified path.
  *
  * This function synchronously reads the file and returns its content
- * as a string. It expects the URL to be a valid path to an existing
+ * as a string. It expects the path to be a valid path to an existing
  * file. If the file cannot be read, it will throw an error.
  *
- * @param {string} url - The path to the file to read.
- * @returns {string} - The content of the file as a UTF-8 encoded string.
+ * @param {string} path - The path to the file to read.
+ * @returns {string} The content of the file as a UTF-8 encoded string.
  */
-export function readFileContent(url: string): string {
-    return fs.readFileSync(url, { encoding: 'utf8' });
+export function readFileContent(path: string): string {
+    return fs.readFileSync(path, { encoding: 'utf8' });
 }

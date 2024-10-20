@@ -5,25 +5,25 @@ import type { Metadata } from 'next';
 import { ProjectItem } from '@/components/projects';
 import { Avatar, MessageDialog, SectionHeader } from '@/components/shared';
 
-// hooks
-import { useFetchProjects } from '@/hooks/useFetchProjects';
-
 // libs
+import { getPostsByPath } from '@/libs/actions';
 import { Post } from '@/libs/definitions';
 
 export const metadata: Metadata = {
-    title: 'Projects'
+    title: 'Projects',
+    description: "Check out the work I've been crafting!"
 };
 
 export default function Page() {
-    const { clientProjects, sideProjects } = useFetchProjects();
+    const clientProjects = getPostsByPath('/projects/client-projects');
+    const sideProjects = getPostsByPath('/projects/side-projects');
 
     return (
         <>
             <section className='mx-auto flex w-fit flex-col items-center gap-y-4'>
                 <Avatar />
                 <MessageDialog
-                    messages={["Check out the work I've been crafting below!"]}
+                    messages={["Check out the work I've been crafting!"]}
                     arrow='top'
                 />
             </section>

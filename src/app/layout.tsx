@@ -54,7 +54,7 @@ const futuraFont = localFont({
 
 export const metadata: Metadata = {
     title: {
-        template: 'Campbell - %s',
+        template: '%s - Campbell',
         default: "Campbell's corner"
     },
     description: "Welcome to Campbell's corner of the internet!"

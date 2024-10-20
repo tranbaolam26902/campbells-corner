@@ -5,7 +5,8 @@ import type { Metadata } from 'next';
 import { Avatar, MessageDialog, SectionHeader } from '@/components/shared';
 
 export const metadata: Metadata = {
-    title: 'Posts'
+    title: 'Posts',
+    description: "Check out the thoughts I've shared!"
 };
 
 export default function Page() {

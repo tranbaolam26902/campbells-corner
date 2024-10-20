@@ -4,11 +4,9 @@ import { notFound } from 'next/navigation';
 // components
 import { Back, Markdown } from '@/components/shared';
 
-// hooks
-import { useFetchProjects } from '@/hooks/useFetchProjects';
-
 // utils
 import { readFileContent } from '@/utils/content-file-utils';
+import { findPostBySlug, getPostsByPath } from '@/libs/actions';
 
 interface Props {
     params: {
@@ -16,8 +14,26 @@ interface Props {
     };
 }
 
+export const generateMetadata = ({ params }: Props) => {
+    const clientProjects = getPostsByPath('/projects/client-projects');
+    const sideProjects = getPostsByPath('/projects/side-projects');
+    const project = findPostBySlug(
+        [...clientProjects, ...sideProjects],
+        params.slug
+    );
+
+    if (project === null) notFound();
+
+    return { title: project.name };
+};
+
 export default function Page({ params }: Props) {
-    const { project } = useFetchProjects(params.slug);
+    const clientProjects = getPostsByPath('/projects/client-projects');
+    const sideProjects = getPostsByPath('/projects/side-projects');
+    const project = findPostBySlug(
+        [...clientProjects, ...sideProjects],
+        params.slug
+    );
 
     if (project === null) notFound();
 
