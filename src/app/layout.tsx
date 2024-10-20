@@ -57,7 +57,10 @@ export const metadata: Metadata = {
         template: '%s - Campbell',
         default: "Campbell's corner"
     },
-    description: "Welcome to Campbell's corner of the internet!"
+    description: "Welcome to Campbell's corner of the internet!",
+    openGraph: {
+        images: ['/images/avatar.svg']
+    }
 };
 
 export default function RootLayout({

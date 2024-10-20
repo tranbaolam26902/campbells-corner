@@ -1,5 +1,6 @@
 // packages
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 
 // components
 import { Back, Markdown } from '@/components/shared';
@@ -14,7 +15,7 @@ interface Props {
     };
 }
 
-export const generateMetadata = ({ params }: Props) => {
+export function generateMetadata({ params }: Props): Metadata {
     const clientProjects = getPostsByPath('/projects/client-projects');
     const sideProjects = getPostsByPath('/projects/side-projects');
     const project = findPostBySlug(
@@ -24,8 +25,14 @@ export const generateMetadata = ({ params }: Props) => {
 
     if (project === null) notFound();
 
-    return { title: project.name };
-};
+    return {
+        title: project.name,
+        description: `Detailed information and showcases of ${project.name} project.`,
+        openGraph: {
+            images: [project.previewImg]
+        }
+    };
+}
 
 export default function Page({ params }: Props) {
     const clientProjects = getPostsByPath('/projects/client-projects');

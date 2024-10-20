@@ -1,5 +1,5 @@
 // public
-import avatar from '@/public/images/notion-avatar.svg';
+import avatar from '@/public/images/avatar.svg';
 
 // packages
 import Image from 'next/image';
