@@ -34,7 +34,7 @@ export default function MobileMenu({ navLinks }: MobileMenuProps) {
 
     return (
         <div className='relative sm:hidden'>
-            <button type='button' onClick={handleOpen}>
+            <button type='button' onClick={handleOpen} className='align-middle'>
                 <Image
                     src='/icons/menu.svg'
                     alt='menu icon'
