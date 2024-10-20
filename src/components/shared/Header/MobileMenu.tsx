@@ -49,7 +49,7 @@ export default function MobileMenu({ navLinks }: MobileMenuProps) {
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.2 }}
-                    className='absolute right-0 top-10 z-10 flex w-40 origin-top flex-col overflow-hidden rounded-lg bg-white py-2'
+                    className='absolute right-0 top-10 flex w-40 origin-top flex-col overflow-hidden rounded-lg bg-white py-2'
                 >
                     <button
                         type='button'
