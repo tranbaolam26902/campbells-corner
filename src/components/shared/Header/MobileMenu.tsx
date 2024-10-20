@@ -10,11 +10,11 @@ import { useCallback, useState } from 'react';
 import { motion } from 'framer-motion';
 
 // components
-import { Modal } from '@/components/shared';
 import { MobileNavItem } from './NavItem';
 
 // libs
 import { NavLink } from '@/libs/definitions';
+import Modal from '../Modal';
 
 interface MobileMenuProps {
     navLinks: Array<NavLink>;

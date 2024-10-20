@@ -12,13 +12,16 @@ interface ModalProps {
     onClose: () => void;
 }
 
-const Modal = ({
-    show,
-    place = 'children',
-    center = false,
-    children,
-    onClose
-}: ModalProps) => {
+export default function Modal(props: ModalProps) {
+    // props
+    const {
+        show,
+        place = 'children',
+        center = false,
+        children,
+        onClose
+    } = props;
+
     // methods
     const enablePageScroll = () => {
         document.body.style.overflow = '';
@@ -74,6 +77,4 @@ const Modal = ({
             )}
         </AnimatePresence>
     );
-};
-
-export default Modal;
+}

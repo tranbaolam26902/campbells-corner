@@ -1,6 +1,6 @@
 // packages
 import { notFound } from 'next/navigation';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 // components
 import { Back, Markdown } from '@/components/shared';
