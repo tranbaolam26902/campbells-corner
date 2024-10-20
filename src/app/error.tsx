@@ -8,7 +8,8 @@ import type { Metadata } from 'next';
 import { Avatar, MessageDialog } from '@/components/shared';
 
 export const metadata: Metadata = {
-    title: '404 Not found'
+    title: 'Error',
+    description: 'Uh-oh, something went wrong!'
 };
 
 export default function NotFound({ reset }: { reset: () => void }) {
