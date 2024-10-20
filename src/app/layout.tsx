@@ -53,14 +53,14 @@ const futuraFont = localFont({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://campbells-corver.vercel.app'),
+    metadataBase: new URL('https://campbells-corner.vercel.app'),
     title: {
         template: '%s - Campbell',
         default: "Campbell's corner"
     },
     description: "Welcome to Campbell's corner of the internet!",
     openGraph: {
-        images: '/images/avatar.svg'
+        images: '/images/opengraph.png'
     }
 };
 
