@@ -1,12 +1,13 @@
 // packages
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 // components
 import { Avatar, MessageDialog } from '@/components/shared';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
-    title: '404 Not found'
+    title: '404 Not found',
+    description: 'Oops, page not found! Looks like you took a wrong turn!'
 };
 
 export default function NotFound() {
