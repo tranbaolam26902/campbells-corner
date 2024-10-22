@@ -15,10 +15,7 @@ export default function NotFound() {
         <section className='mx-auto flex w-fit flex-col items-center gap-y-4'>
             <Avatar />
             <MessageDialog
-                messages={[
-                    'Oops, page not found!',
-                    'Looks like you took a wrong turn!'
-                ]}
+                message='Oops, page not found! Looks like you took a wrong turn!'
                 arrow='top'
             />
             <Link

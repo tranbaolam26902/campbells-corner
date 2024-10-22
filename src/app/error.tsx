@@ -21,10 +21,7 @@ export default function NotFound({ reset }: { reset: () => void }) {
     return (
         <section className='mx-auto flex w-fit flex-col items-center gap-y-4'>
             <Avatar />
-            <MessageDialog
-                messages={['Uh-oh, something went wrong!']}
-                arrow='top'
-            />
+            <MessageDialog message='Uh-oh, something went wrong!' arrow='top' />
             <button
                 type='button'
                 className='rounded bg-secondary-300 px-4 py-2 font-medium hover:bg-secondary-200'
