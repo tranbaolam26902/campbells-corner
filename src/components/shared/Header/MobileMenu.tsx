@@ -22,7 +22,7 @@ interface MobileMenuProps {
 
 export default function MobileMenu({ navLinks }: MobileMenuProps) {
     // states
-    const [showMenu, setShowMenu] = useState<boolean>(false);
+    const [showMenu, setShowMenu] = useState(false);
 
     // event handlers
     const handleOpen = () => {

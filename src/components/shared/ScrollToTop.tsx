@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 export default function ScrollToTop() {
     // states
-    const [showButton, setShowButton] = useState<boolean>(false);
+    const [showButton, setShowButton] = useState(false);
 
     // event handlers
     const handleDisplayButton = () => {
