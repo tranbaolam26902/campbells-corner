@@ -1,14 +1,21 @@
+'use client';
+
+// hooks
+import useAnimatedText from '@/hooks/useAnimatedText';
+
 interface MessageDialogProps {
-    messages: Array<string>;
+    message: string;
     arrow?: 'left' | 'top' | 'none';
 }
 
 export default function MessageDialog({
-    messages,
+    message,
     arrow = 'none'
 }: MessageDialogProps) {
+    const animatedText = useAnimatedText(message);
+
     return (
-        <div className='relative mx-auto flex w-fit animate-typewriter flex-col justify-center rounded-lg border border-ebony bg-white px-4 py-2 font-medium sm:mx-0'>
+        <div className='relative mx-auto w-fit rounded-lg border border-ebony bg-white px-4 py-2 text-center sm:mx-0 '>
             {arrow === 'left' && (
                 <>
                     <span className='absolute right-full hidden -translate-x-px border-x-8 border-y-4 border-transparent border-r-black sm:inline'></span>
@@ -21,14 +28,7 @@ export default function MessageDialog({
                     <span className='absolute bottom-full left-1/2 translate-y-px border-x-4 border-y-8 border-transparent border-b-white'></span>
                 </>
             )}
-            {messages.map((message) => (
-                <span
-                    key={message}
-                    className='text-nowrap overflow-hidden text-center'
-                >
-                    {message}
-                </span>
-            ))}
+            <span>{animatedText}</span>
         </div>
     );
 }

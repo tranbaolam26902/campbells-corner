@@ -58,7 +58,7 @@ export const metadata: Metadata = {
         template: '%s - Campbell',
         default: "Campbell's corner"
     },
-    description: "Welcome to Campbell's corner of the internet!",
+    description: 'Hi, welcome to my space on the internet!',
     openGraph: {
         images: '/images/opengraph.png'
     }

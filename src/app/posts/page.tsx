@@ -6,7 +6,7 @@ import { Avatar, MessageDialog, SectionHeader } from '@/components/shared';
 
 export const metadata: Metadata = {
     title: 'Posts',
-    description: "Check out the thoughts I've shared!"
+    description: "See the thoughts I've shared!"
 };
 
 export default function Page() {
@@ -15,10 +15,7 @@ export default function Page() {
             <section className='mx-auto flex w-fit flex-col items-center gap-y-4'>
                 <Avatar />
                 <MessageDialog
-                    messages={[
-                        "I don't have any posts yet,",
-                        "but I'll be sharing soon. Stay tuned!"
-                    ]}
+                    message="Stay tuned, I'll have posts up here soon!"
                     arrow='top'
                 />
             </section>

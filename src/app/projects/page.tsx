@@ -23,7 +23,7 @@ export default function Page() {
             <section className='mx-auto flex w-fit flex-col items-center gap-y-4'>
                 <Avatar />
                 <MessageDialog
-                    messages={["Check out the work I've been crafting!"]}
+                    message="Check out the work I've been crafting!"
                     arrow='top'
                 />
             </section>
