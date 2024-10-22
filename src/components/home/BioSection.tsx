@@ -1,7 +1,12 @@
 // components
 import { SectionHeader } from '@/components/shared';
 
-const bio = [
+interface Bio {
+    time: string;
+    info: string;
+}
+
+const bio: Array<Bio> = [
     {
         time: '2002',
         info: 'Born in Dalat City, Vietnam.'
