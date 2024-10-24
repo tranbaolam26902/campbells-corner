@@ -9,7 +9,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css';
 
 // components
-import { Header, Footer, ScrollToTop } from '@/components/shared';
+import { Header, Footer, ScrollToTop, Container } from '@/components/shared';
 
 const futuraFont = localFont({
     src: [
@@ -72,7 +72,7 @@ export default function RootLayout({
             <body className={`${futuraFont.variable} antialiased`}>
                 <NextTopLoader color='#ffd1c8' showSpinner={false} />
                 <Header />
-                {children}
+                <Container>{children}</Container>
                 <Footer />
                 <ScrollToTop />
                 <Analytics />
