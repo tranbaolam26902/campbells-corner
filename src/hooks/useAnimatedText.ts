@@ -27,7 +27,7 @@ export default function useAnimatedText(text: string) {
         }
 
         const controls = animate(animatedCursor, text.length, {
-            duration: 1,
+            duration: 2,
             ease: 'linear',
             onUpdate(latest) {
                 setCursor(Math.floor(latest));
