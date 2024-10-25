@@ -3,6 +3,7 @@ export { default as Avatar } from './Avatar';
 export { default as Back } from './Back';
 export { default as Container } from './Container';
 export { default as Footer } from './Footer';
+export { default as ImageWithBlur } from './ImageWithBlur';
 export { default as Markdown } from './Markdown';
 export { default as MessageDialog } from './MessageDialog';
 export { default as Modal } from './Modal';

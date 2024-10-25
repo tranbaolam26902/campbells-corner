@@ -1,17 +1,14 @@
-'use server';
-
 // packages
 import { MDXRemote } from 'next-mdx-remote/rsc';
-import Image from 'next/image';
-import fs from 'node:fs/promises';
-import path from 'node:path';
-import { getPlaiceholder } from 'plaiceholder';
+
+// components
+import ImageWithBlur from './ImageWithBlur';
 
 interface MarkdownProps {
     source: string;
 }
 
-export default async function Markdown({ source }: MarkdownProps) {
+export default function Markdown({ source }: MarkdownProps) {
     return (
         <MDXRemote
             source={source}
@@ -52,25 +49,16 @@ export default async function Markdown({ source }: MarkdownProps) {
                         {props.children}
                     </a>
                 ),
-                img: async (props) => {
-                    const buffer = await fs.readFile(
-                        path.join(process.cwd(), '/public', props.src || '')
-                    );
-                    const { base64 } = await getPlaiceholder(buffer);
-
-                    return (
-                        <Image
-                            src={props.src || ''}
-                            alt='showcase image'
-                            width={2560}
-                            height={1440}
-                            priority
-                            placeholder='blur'
-                            blurDataURL={base64}
-                            className='h-auto w-full rounded-xl shadow'
-                        />
-                    );
-                }
+                img: (props) => (
+                    <ImageWithBlur
+                        src={props.src || ''}
+                        alt='showcase image'
+                        width={2560}
+                        height={1440}
+                        priority
+                        className='h-auto w-full rounded-xl shadow'
+                    />
+                )
             }}
         />
     );
