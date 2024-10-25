@@ -4,6 +4,7 @@
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Image from 'next/image';
 import fs from 'node:fs/promises';
+import path from 'node:path';
 import { getPlaiceholder } from 'plaiceholder';
 
 interface MarkdownProps {
@@ -53,7 +54,7 @@ export default async function Markdown({ source }: MarkdownProps) {
                 ),
                 img: async (props) => {
                     const buffer = await fs.readFile(
-                        process.cwd() + '/public' + props.src
+                        path.join(process.cwd(), 'public', props.src || '')
                     );
                     const { base64 } = await getPlaiceholder(buffer);
 

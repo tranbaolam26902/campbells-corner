@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import fs from 'node:fs/promises';
+import path from 'node:path';
 import { getPlaiceholder } from 'plaiceholder';
 
 // libs
@@ -13,7 +14,7 @@ interface ProjectItemProps {
 
 export default async function ProjectItem({ project }: ProjectItemProps) {
     const buffer = await fs.readFile(
-        process.cwd() + '/public' + project.previewImg
+        path.join(process.cwd(), 'public', project.previewImg)
     );
     const { base64 } = await getPlaiceholder(buffer);
 
