@@ -1,9 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    output: 'standalone',
-    experimental: {
-        turbotrace: {}
-    }
-};
+const nextConfig = {};
 
 export default nextConfig;

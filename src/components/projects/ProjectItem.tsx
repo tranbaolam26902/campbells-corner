@@ -1,9 +1,9 @@
 // packages
 import Link from 'next/link';
+import Image from 'next/image';
 
 // libs
 import { Post } from '@/libs/definitions';
-import { ImageWithBlur } from '@/components/shared';
 
 interface ProjectItemProps {
     project: Post;
@@ -14,7 +14,7 @@ export default function ProjectItem({ project }: ProjectItemProps) {
         <li className='text-center'>
             <Link href={`/projects/${project.slug}`}>
                 <div className='relative'>
-                    <ImageWithBlur
+                    <Image
                         src={project.previewImg}
                         alt='thumbnail'
                         width={2560}
