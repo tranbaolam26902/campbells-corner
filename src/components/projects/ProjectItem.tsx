@@ -12,7 +12,9 @@ interface ProjectItemProps {
 }
 
 export default async function ProjectItem({ project }: ProjectItemProps) {
-    const buffer = await fs.readFile('public' + project.previewImg);
+    const buffer = await fs.readFile(
+        process.cwd() + '/public' + project.previewImg
+    );
     const { base64 } = await getPlaiceholder(buffer);
 
     return (

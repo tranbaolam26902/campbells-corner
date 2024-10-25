@@ -52,7 +52,9 @@ export default async function Markdown({ source }: MarkdownProps) {
                     </a>
                 ),
                 img: async (props) => {
-                    const buffer = await fs.readFile('public' + props.src);
+                    const buffer = await fs.readFile(
+                        process.cwd() + '/public' + props.src
+                    );
                     const { base64 } = await getPlaiceholder(buffer);
 
                     return (
