@@ -1,7 +1,6 @@
 // packages
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import NextTopLoader from 'nextjs-toploader';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
@@ -70,7 +69,6 @@ export default function RootLayout({
     return (
         <html lang='en'>
             <body className={`${futuraFont.variable} antialiased`}>
-                <NextTopLoader color='#ffd1c8' showSpinner={false} />
                 <Header />
                 <Container>{children}</Container>
                 <Footer />

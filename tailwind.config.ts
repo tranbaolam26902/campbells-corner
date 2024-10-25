@@ -9,13 +9,14 @@ const config: Config = {
     theme: {
         extend: {
             keyframes: {
-                'grow-width': {
-                    '0%': { width: '0' },
-                    '100%': { width: '100%' }
+                loading: {
+                    to: {
+                        'clip-path': 'inset(0 -1ch 0 0)'
+                    }
                 }
             },
             animation: {
-                typewriter: 'grow-width 2s forwards'
+                loading: 'loading 1s infinite linear alternate'
             },
             fontFamily: {
                 futura: ['var(--font-futura)']
