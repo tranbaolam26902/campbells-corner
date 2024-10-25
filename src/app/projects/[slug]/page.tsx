@@ -35,7 +35,10 @@ export function generateMetadata({ params }: Props): Metadata {
 }
 
 export function generateStaticParams() {
-    return [];
+    const clientProjects = getPostsByPath('/projects/client-projects');
+    const sideProjects = getPostsByPath('/projects/side-projects');
+
+    return [...clientProjects, ...sideProjects].map((project) => project.slug);
 }
 
 export default function Page({ params }: Props) {
