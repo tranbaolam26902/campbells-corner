@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'standalone'
+    experimental: {
+        outputFileTracingIncludes: {
+            '/content': ['./content/**/*'],
+            '/images': ['./public/**/*']
+        }
+    }
 };
 
 export default nextConfig;
