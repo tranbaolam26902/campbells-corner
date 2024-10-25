@@ -3,6 +3,7 @@
 // packages
 import Image from 'next/image';
 import fs from 'node:fs/promises';
+import path from 'node:path';
 import { getPlaiceholder } from 'plaiceholder';
 
 interface ImageWithBlurProps {
@@ -22,7 +23,9 @@ export default async function ImageWithBlur({
     priority = false,
     className
 }: ImageWithBlurProps) {
-    const buffer = await fs.readFile(process.cwd() + `/public${src}`);
+    const buffer = await fs.readFile(
+        path.resolve(process.cwd() + `/public${src}`)
+    );
     const { base64 } = await getPlaiceholder(buffer);
 
     return (
