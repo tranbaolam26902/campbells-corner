@@ -20,9 +20,9 @@ campbells-corner/
  │  # Static image, icon files
  ├─ public/
  └─ src/
-     │  # Routes and Page files
+     │  # Route and Page files
      ├─ app/
-     │  # React components files
+     │  # React component files
      ├─ components/
      │  # Non - React files
      ├─ libs/
