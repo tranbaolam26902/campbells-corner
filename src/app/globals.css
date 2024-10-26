@@ -16,30 +16,7 @@ body {
     background: var(--background);
     font-family: var(--font-futura);
     font-size: 1.125rem;
-    overflow-y: scroll; /* prevent layout shift */
     overscroll-behavior: none;
-}
-
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgba(127, 127, 127);
-    background-clip: padding-box;
-
-    &:hover {
-        background: #7f7f7f99;
-        background-clip: padding-box;
-    }
-
-    &:active {
-        background: #7f7f7fcc;
-        background-clip: padding-box;
-    }
-
-    border: 2px solid transparent;
-    border-radius: 9999px;
 }
 
 /* reusable classes */
