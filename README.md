@@ -2,7 +2,7 @@
 
 ### Website: [https://campbells-corner.vercel.app](https://campbells-corner.vercel.app)
 
-This is my personal website, where I introduce about myself, showcase my projects, share my thoughts, and review the tech gear I use in my development career.
+This is my personal website, where I introduce myself, showcase my projects, share my thoughts, and review the tech gear I use in my career as a front-end web developer.
 
 ## Tech stack
 
