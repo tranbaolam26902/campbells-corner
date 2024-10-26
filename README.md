@@ -13,19 +13,21 @@ This is my personal website, where I introduce about myself, showcase my project
 
 ## Project structure
 
+```
 campbells-corner/
-│	# Post content files
-├─ contents/
-│	# Static image, icon files
-├─ public/
-└─ src/
-        │    # Routes and Page files
-        ├─ app/
-        │    # React components files
-        ├─ components/
-        │    # Non - React files
-        ├─ libs/
-        │    # Utility functions and helper methods
-        └─ utils/
+ │  # Post content files
+ ├─ contents/
+ │  # Static image, icon files
+ ├─ public/
+ └─ src/
+     │  # Routes and Page files
+     ├─ app/
+     │  # React components files
+     ├─ components/
+     │  # Non - React files
+     ├─ libs/
+     │  # Utility functions and helper methods
+     └─ utils/
+```
 
-All page content is render automatically based on markdown files in the `contents/` folder.
+*All page content is render automatically based on markdown files in the `contents/` folder.*
