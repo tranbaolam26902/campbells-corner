@@ -37,7 +37,7 @@ export default function ScrollToTop() {
                     exit={{ y: 32, opacity: 0 }}
                     type='button'
                     title='Scroll to top'
-                    className='fixed bottom-4 right-4 aspect-square rounded-md border border-ebony bg-white p-2'
+                    className='fixed bottom-4 right-4 aspect-square rounded-md border border-text-base bg-white p-2 dark:bg-background-200'
                     onClick={handleScrollToTop}
                 >
                     <Image
@@ -45,6 +45,8 @@ export default function ScrollToTop() {
                         alt='arrow up icon'
                         width={24}
                         height={24}
+                        priority
+                        className='dark:invert'
                     />
                 </motion.button>
             )}

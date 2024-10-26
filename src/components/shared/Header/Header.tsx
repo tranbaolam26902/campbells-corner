@@ -1,15 +1,10 @@
-// public
-import github from '@/public/images/github.png';
-import logo from '@/public/images/logo.png';
-
 // packages
-import Image from 'next/image';
 import Link from 'next/link';
 
 // components
 import { NavItem } from './NavItem';
 import MobileMenu from './MobileMenu';
-
+import { ThemeSwitcher } from '@/components/shared';
 // libs
 import { NavLink } from '@/libs/definitions';
 
@@ -36,19 +31,17 @@ export default function Header() {
     return (
         <header
             aria-hidden='false'
-            className='sticky top-0 z-10 bg-white bg-opacity-40 backdrop-blur'
+            className='sticky top-0 z-10 bg-white/60 backdrop-blur dark:bg-background-50'
         >
-            <nav className='mx-auto flex h-12 items-center justify-between px-4 py-3 sm:max-w-xl md:max-w-2xl lg:max-w-3xl'>
-                <Link href='/'>
-                    <Image
-                        src={logo}
-                        alt='site logo'
-                        className='h-6 w-auto'
-                        priority
-                    />
+            <nav className='mx-auto flex h-12 items-center justify-between px-4 sm:max-w-xl md:max-w-2xl lg:max-w-3xl'>
+                <Link
+                    href='/'
+                    className='hover-opacity select-none font-berkshire-swash text-2xl'
+                >
+                    campbells
                 </Link>
 
-                <ul role='menu' className='hidden gap-x-4 sm:flex'>
+                <ul role='menu' className='hidden gap-x-3 sm:flex'>
                     {navLinks.map((navItem) => (
                         <NavItem
                             key={navItem.name}
@@ -58,20 +51,10 @@ export default function Header() {
                     ))}
                 </ul>
 
-                <Link
-                    href='https://github.com/tranbaolam26902'
-                    target='_blank'
-                    className='hidden sm:inline'
-                >
-                    <Image
-                        src={github}
-                        alt='github logo'
-                        className='h-6 w-auto'
-                        priority
-                    />
-                </Link>
-
-                <MobileMenu navLinks={navLinks} />
+                <div className='flex items-center gap-x-4'>
+                    <ThemeSwitcher />
+                    <MobileMenu navLinks={navLinks} />
+                </div>
             </nav>
         </header>
     );

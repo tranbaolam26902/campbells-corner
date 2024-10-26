@@ -1,6 +1,9 @@
+// packages
 import Link from 'next/link';
-import { SectionHeader } from '../shared';
 import Image from 'next/image';
+
+// components
+import { SectionHeader } from '@/components/shared';
 
 interface Contact {
     icon: string;
@@ -36,13 +39,22 @@ export default function ContactSection() {
                             alt='icon'
                             width={20}
                             height={20}
+                            priority
+                            className='dark:invert'
                         />
                         {contact.link ? (
-                            <Link href={contact.link} target='_blank'>
+                            <Link
+                                href={contact.link}
+                                target='_blank'
+                                className='hover-opacity font-medium'
+                            >
                                 {contact.text}
                             </Link>
                         ) : (
-                            <a href={`mailto:${contact.text}`}>
+                            <a
+                                href={`mailto:${contact.text}`}
+                                className='hover-opacity'
+                            >
                                 {contact.text}
                             </a>
                         )}

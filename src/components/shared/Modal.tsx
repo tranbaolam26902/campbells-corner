@@ -67,7 +67,7 @@ export default function Modal(props: ModalProps) {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.2 }}
-                        className={`fixed left-0 top-0 h-screen w-screen bg-black/40 ${center ? 'flex items-center justify-center' : ''}`}
+                        className={`fixed left-0 top-0 h-screen w-screen bg-black/40 dark:bg-black/60 ${center ? 'flex items-center justify-center' : ''}`}
                         onClick={handleClose}
                     >
                         {place === 'children' && <>{children}</>}

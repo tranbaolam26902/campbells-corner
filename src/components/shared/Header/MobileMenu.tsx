@@ -1,20 +1,16 @@
 'use client';
 
-// public
-import github from '@/public/images/github.png';
-
 // packages
-import Link from 'next/link';
 import Image from 'next/image';
 import { useCallback, useState } from 'react';
 import { motion } from 'framer-motion';
 
 // components
 import { MobileNavItem } from './NavItem';
+import Modal from '../Modal'; // cannot use import alias
 
 // libs
 import { NavLink } from '@/libs/definitions';
-import Modal from '../Modal';
 
 interface MobileMenuProps {
     navLinks: Array<NavLink>;
@@ -34,12 +30,18 @@ export default function MobileMenu({ navLinks }: MobileMenuProps) {
 
     return (
         <div className='relative sm:hidden'>
-            <button type='button' onClick={handleOpen} className='align-middle'>
+            <button
+                type='button'
+                className='my-auto block'
+                onClick={handleOpen}
+            >
                 <Image
                     src='/icons/menu.svg'
                     alt='menu icon'
-                    width={24}
-                    height={24}
+                    width={32}
+                    height={32}
+                    priority
+                    className='hover-opacity dark:invert'
                 />
             </button>
 
@@ -49,11 +51,11 @@ export default function MobileMenu({ navLinks }: MobileMenuProps) {
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.2 }}
-                    className='absolute right-0 top-10 flex w-40 origin-top flex-col overflow-hidden rounded-lg bg-white py-2'
+                    className='absolute right-0 top-10 flex w-40 origin-top flex-col overflow-hidden rounded-lg bg-white py-2 dark:bg-background-200'
                 >
                     <button
                         type='button'
-                        className='mb-2 flex items-center gap-x-2 px-4 py-2 font-medium hover:bg-gray-100'
+                        className='mb-2 flex items-center gap-x-2 px-4 py-2 font-medium hover:bg-gray-100 dark:hover:bg-background-300'
                         onClick={handleClose}
                     >
                         <Image
@@ -61,6 +63,8 @@ export default function MobileMenu({ navLinks }: MobileMenuProps) {
                             alt='close icon'
                             width={20}
                             height={20}
+                            priority
+                            className='dark:invert'
                         />
                         <span>Close</span>
                     </button>
@@ -73,18 +77,6 @@ export default function MobileMenu({ navLinks }: MobileMenuProps) {
                             onClick={handleClose}
                         />
                     ))}
-
-                    <Link
-                        href='https://github.com/tranbaolam26902'
-                        target='_blank'
-                        className='px-3 py-2 hover:bg-gray-100'
-                    >
-                        <Image
-                            src={github}
-                            alt='github logo'
-                            className='h-6 w-auto'
-                        />
-                    </Link>
                 </motion.nav>
             </Modal>
         </div>

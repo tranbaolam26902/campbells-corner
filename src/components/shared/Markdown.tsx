@@ -38,11 +38,7 @@ export default function Markdown({ source }: MarkdownProps) {
                     <a
                         href={props.href}
                         target='_blank'
-                        style={{
-                            textDecoration: 'underline',
-                            color: '#024caa',
-                            fontWeight: 500
-                        }}
+                        className='hover-opacity font-medium text-secondary-600 underline'
                     >
                         {props.children}
                     </a>

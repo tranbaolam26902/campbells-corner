@@ -8,8 +8,20 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css';
 
 // components
-import { Header, Footer, ScrollToTop, Container } from '@/components/shared';
+import {
+    Header,
+    Footer,
+    ScrollToTop,
+    Container,
+    ThemeWrapper
+} from '@/components/shared';
 
+const berkshireSwashFont = localFont({
+    src: './fonts/BerkshireSwash.ttf',
+    weight: '400',
+    style: 'normal',
+    variable: '--font-berkshire-swash'
+});
 const futuraFont = localFont({
     src: [
         {
@@ -68,11 +80,16 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang='en'>
-            <body className={`${futuraFont.variable} antialiased`}>
-                <Header />
-                <Container>{children}</Container>
-                <Footer />
-                <ScrollToTop />
+            <body
+                className={`${futuraFont.variable} ${berkshireSwashFont.variable} antialiased`}
+                suppressHydrationWarning
+            >
+                <ThemeWrapper>
+                    <Header />
+                    <Container>{children}</Container>
+                    <Footer />
+                    <ScrollToTop />
+                </ThemeWrapper>
                 <Analytics />
                 <SpeedInsights />
             </body>

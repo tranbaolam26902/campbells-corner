@@ -24,7 +24,7 @@ export default function NotFound({ reset }: { reset: () => void }) {
             <MessageDialog message='Uh-oh, something went wrong!' arrow='top' />
             <button
                 type='button'
-                className='rounded bg-secondary-300 px-4 py-2 font-medium hover:bg-secondary-200'
+                className='rounded bg-secondary-200 px-4 py-2 font-medium hover:bg-secondary-100 hover:transition dark:bg-secondary-base dark:text-background-base dark:hover:bg-secondary-800'
                 onClick={handleReset}
             >
                 Try again
@@ -32,7 +32,7 @@ export default function NotFound({ reset }: { reset: () => void }) {
             <span>or</span>
             <Link
                 href='/'
-                className='rounded bg-primary-200 px-4 py-2 font-medium hover:bg-primary-100'
+                className='rounded bg-primary-100 px-4 py-2 font-medium hover:bg-primary-base hover:transition dark:bg-primary-300 dark:hover:bg-primary-400'
             >
                 Go back to the Homepage 🏠
             </Link>
