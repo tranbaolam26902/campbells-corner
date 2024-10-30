@@ -1,5 +1,8 @@
 // components
-import { Avatar, MessageDialog } from '@/components/shared';
+import { Avatar, MessageDialog } from '@/components/index';
+
+// constants
+import { MESSAGE, NAME } from '@/constants/home-constants';
 
 export default function GreetingSection() {
     return (
@@ -7,12 +10,9 @@ export default function GreetingSection() {
             <Avatar />
             <div className='flex flex-col'>
                 <h1 className='mb-4 mt-4 text-center text-3xl font-semibold sm:mt-0 sm:text-left'>
-                    Tran &#34;Campbell&#34; Bao Lam
+                    {NAME}
                 </h1>
-                <MessageDialog
-                    message='Hi, welcome to my space on the internet!'
-                    arrow='left'
-                />
+                <MessageDialog message={MESSAGE} arrow='left' />
             </div>
         </section>
     );

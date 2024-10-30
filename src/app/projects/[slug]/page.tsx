@@ -3,7 +3,10 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
 // components
-import { Back, Markdown } from '@/components/shared';
+import { Back, Markdown } from '@/components/index';
+
+// constants
+import { DYNAMIC_PROJECT_METADATA_DESCRIPTION } from '@/constants/projects-constants';
 
 // utils
 import { readFileContent } from '@/utils/content-file-utils';
@@ -27,7 +30,7 @@ export function generateMetadata({ params }: Props): Metadata {
 
     return {
         title: project.name,
-        description: `Detailed information and showcases of the ${project.name} project.`,
+        description: DYNAMIC_PROJECT_METADATA_DESCRIPTION + project.name,
         openGraph: {
             images: project.previewImg
         }

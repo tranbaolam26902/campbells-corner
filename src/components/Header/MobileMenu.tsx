@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 import { MobileNavItem } from './NavItem';
 import Modal from '../Modal'; // cannot use import alias
 
-// libs
+// types
 import { NavLink } from '@/libs/definitions';
 
 interface MobileMenuProps {

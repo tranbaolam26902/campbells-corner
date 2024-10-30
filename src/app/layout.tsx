@@ -10,11 +10,18 @@ import './globals.css';
 // components
 import {
     Header,
+    Container,
     Footer,
     ScrollToTop,
-    Container,
     ThemeWrapper
-} from '@/components/shared';
+} from '@/components/index';
+
+// constants
+import {
+    APP_TITLE_TEMPLATE,
+    APP_DEFAULT_TITLE,
+    APP_MESSAGE
+} from '@/constants/global-constants';
 
 const berkshireSwashFont = localFont({
     src: './fonts/BerkshireSwash.ttf',
@@ -66,10 +73,10 @@ const futuraFont = localFont({
 export const metadata: Metadata = {
     metadataBase: new URL('https://campbells-corner.vercel.app'),
     title: {
-        template: '%s - Campbell',
-        default: "Campbell's corner"
+        template: APP_TITLE_TEMPLATE,
+        default: APP_DEFAULT_TITLE
     },
-    description: 'Hi, welcome to my space on the internet!',
+    description: APP_MESSAGE,
     openGraph: {
         images: '/images/opengraph.png'
     }

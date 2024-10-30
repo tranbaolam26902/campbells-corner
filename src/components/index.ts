@@ -6,6 +6,7 @@ export { default as Footer } from './Footer';
 export { default as Markdown } from './Markdown';
 export { default as MessageDialog } from './MessageDialog';
 export { default as Modal } from './Modal';
+export { default as PostItem } from './PostItem';
 export { default as ScrollToTop } from './ScrollToTop';
 export { default as SectionHeader } from './SectionHeader';
 export { default as ThemeSwitcher } from './ThemeSwitcher';

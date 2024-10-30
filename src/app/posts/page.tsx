@@ -2,26 +2,45 @@
 import type { Metadata } from 'next';
 
 // components
-import { Avatar, MessageDialog, SectionHeader } from '@/components/shared';
+import {
+    Avatar,
+    MessageDialog,
+    PostItem,
+    SectionHeader
+} from '@/components/index';
+
+// constants
+import { EMPTY_MESSAGE, MESSAGE, TITLE } from '@/constants/posts-constants';
+
+// libs
+import { getPostsByPath } from '@/libs/actions';
+import { Post } from '@/libs/definitions';
 
 export const metadata: Metadata = {
-    title: 'Posts',
-    description: "See the thoughts I've shared!"
+    title: TITLE,
+    description: MESSAGE
 };
 
 export default function Page() {
+    const posts = getPostsByPath('/posts');
+
     return (
         <>
             <section className='mx-auto flex w-fit flex-col items-center gap-y-4'>
                 <Avatar />
                 <MessageDialog
-                    message="Stay tuned, I'll have posts up here soon!"
+                    message={posts.length > 0 ? MESSAGE : EMPTY_MESSAGE}
                     arrow='top'
                 />
             </section>
 
             <section>
                 <SectionHeader header='Posts' />
+                <ul className='mt-4 grid gap-x-4 gap-y-8 sm:grid-cols-2'>
+                    {posts.map((post: Post) => (
+                        <PostItem key={post.slug} post={post} route='posts' />
+                    ))}
+                </ul>
             </section>
         </>
     );

@@ -1,4 +1,4 @@
-// libs
+// types
 import { Post } from './definitions';
 
 // utils

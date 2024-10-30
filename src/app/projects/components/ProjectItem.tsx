@@ -5,7 +5,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { getPlaiceholder } from 'plaiceholder';
 
-// libs
+// types
 import { Post } from '@/libs/definitions';
 
 interface ProjectItemProps {

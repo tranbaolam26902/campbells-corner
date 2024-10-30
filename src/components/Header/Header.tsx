@@ -4,28 +4,10 @@ import Link from 'next/link';
 // components
 import { NavItem } from './NavItem';
 import MobileMenu from './MobileMenu';
-import { ThemeSwitcher } from '@/components/shared';
-// libs
-import { NavLink } from '@/libs/definitions';
+import { ThemeSwitcher } from '@/components/index';
 
-const navLinks: Array<NavLink> = [
-    {
-        href: '/',
-        name: 'Home'
-    },
-    {
-        href: '/projects',
-        name: 'Projects'
-    },
-    {
-        href: '/posts',
-        name: 'Posts'
-    },
-    {
-        href: '/uses',
-        name: 'Uses'
-    }
-];
+// constants
+import { BRAND_NAME, NAV_LINKS } from '@/constants/global-constants';
 
 export default function Header() {
     return (
@@ -38,11 +20,11 @@ export default function Header() {
                     href='/'
                     className='hover-opacity select-none font-berkshire-swash text-2xl'
                 >
-                    campbells
+                    {BRAND_NAME}
                 </Link>
 
                 <ul role='menu' className='hidden gap-x-3 sm:flex'>
-                    {navLinks.map((navItem) => (
+                    {NAV_LINKS.map((navItem) => (
                         <NavItem
                             key={navItem.name}
                             href={navItem.href}
@@ -53,7 +35,7 @@ export default function Header() {
 
                 <div className='flex items-center gap-x-4'>
                     <ThemeSwitcher />
-                    <MobileMenu navLinks={navLinks} />
+                    <MobileMenu navLinks={NAV_LINKS} />
                 </div>
             </nav>
         </header>

@@ -2,16 +2,19 @@
 import type { Metadata } from 'next';
 
 // components
-import { ProjectItem } from '@/components/projects';
-import { Avatar, MessageDialog, SectionHeader } from '@/components/shared';
+import { ProjectItem } from './components';
+import { Avatar, MessageDialog, SectionHeader } from '@/components/index';
+
+// constants
+import { EMPTY_MESSAGE, MESSAGE, TITLE } from '@/constants/projects-constants';
 
 // libs
 import { getPostsByPath } from '@/libs/actions';
 import { Post } from '@/libs/definitions';
 
 export const metadata: Metadata = {
-    title: 'Projects',
-    description: "Check out the work I've been crafting!"
+    title: TITLE,
+    description: MESSAGE
 };
 
 export default function Page() {
@@ -23,7 +26,11 @@ export default function Page() {
             <section className='mx-auto flex w-fit flex-col items-center gap-y-4'>
                 <Avatar />
                 <MessageDialog
-                    message="Check out the work I've been crafting!"
+                    message={
+                        [...clientProjects, ...sideProjects].length > 0
+                            ? MESSAGE
+                            : EMPTY_MESSAGE
+                    }
                     arrow='top'
                 />
             </section>

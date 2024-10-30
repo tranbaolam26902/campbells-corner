@@ -2,7 +2,7 @@
 import fs from 'fs';
 import { default as nodePath } from 'path';
 
-// libs
+// types
 import { Post } from '@/libs/definitions';
 
 /**
@@ -63,12 +63,13 @@ export function mapFilesIntoPosts(path: string): Array<Post> {
                 process.cwd(),
                 `/content${path}/${file}`
             );
+            const previewImg = `/images${path}/${fileName.toLowerCase()}-thumbnail.png`;
 
             return {
                 name,
                 slug: fileName,
                 path: filePath,
-                previewImg: `/images${path}/${fileName.toLowerCase()}-thumbnail.png`
+                previewImg
             };
         });
 

@@ -1,28 +1,15 @@
 // components
-import { SectionHeader } from '@/components/shared';
+import { SectionHeader } from '@/components/index';
 
-interface Bio {
-    time: string;
-    info: string;
-}
-
-const bio: Array<Bio> = [
-    {
-        time: '2002',
-        info: 'Born in Dalat City, Vietnam.'
-    },
-    {
-        time: '2024',
-        info: 'Completed the Engineer’s Program in Software Engineering at Dalat University.'
-    }
-];
+// constants
+import { BIO } from '@/constants/home-constants';
 
 export default function BioSection() {
     return (
         <section>
             <SectionHeader header='Bio' />
             <ul>
-                {bio.map((item, index) => (
+                {BIO.map((item, index) => (
                     <li
                         key={index}
                         className='flex gap-x-4 break-words text-justify'
