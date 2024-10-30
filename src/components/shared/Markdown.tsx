@@ -1,6 +1,8 @@
 // packages
 import { MDXRemote } from 'next-mdx-remote/rsc';
-import Image from 'next/image';
+
+// components
+import ImgWithPlaceholder from './ImgWithPlaceholder';
 
 interface MarkdownProps {
     source: string;
@@ -44,7 +46,7 @@ export default function Markdown({ source }: MarkdownProps) {
                     </a>
                 ),
                 img: (props) => (
-                    <Image
+                    <ImgWithPlaceholder
                         src={props.src || ''}
                         alt='showcase image'
                         width={2560}

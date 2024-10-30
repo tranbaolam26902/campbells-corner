@@ -1,6 +1,9 @@
 // packages
 import Link from 'next/link';
 import Image from 'next/image';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { getPlaiceholder } from 'plaiceholder';
 
 // libs
 import { Post } from '@/libs/definitions';
@@ -9,7 +12,12 @@ interface ProjectItemProps {
     project: Post;
 }
 
-export default function ProjectItem({ project }: ProjectItemProps) {
+export default async function ProjectItem({ project }: ProjectItemProps) {
+    const buffer = await fs.readFile(
+        path.resolve('public' + project.previewImg)
+    );
+    const { base64 } = await getPlaiceholder(buffer);
+
     return (
         <li className='text-center'>
             <Link href={`/projects/${project.slug}`}>
@@ -20,6 +28,8 @@ export default function ProjectItem({ project }: ProjectItemProps) {
                         width={2560}
                         height={1440}
                         priority
+                        placeholder='blur'
+                        blurDataURL={base64}
                         className='rounded-lg'
                     />
                     <div className='absolute inset-0 flex items-center justify-center rounded-lg bg-black bg-opacity-50 text-3xl font-bold uppercase leading-10 text-white drop-shadow-md'>
