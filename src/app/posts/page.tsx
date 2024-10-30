@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 import {
     Avatar,
     MessageDialog,
-    PostItem,
+    // PostItem,
     SectionHeader
 } from '@/components/index';
 
@@ -13,8 +13,8 @@ import {
 import { EMPTY_MESSAGE, MESSAGE, TITLE } from '@/constants/posts-constants';
 
 // libs
-import { getPostsByPath } from '@/libs/actions';
-import { Post } from '@/libs/definitions';
+// import { getPostsByPath } from '@/libs/actions';
+// import { Post } from '@/libs/definitions';
 
 export const metadata: Metadata = {
     title: TITLE,
@@ -22,25 +22,26 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-    const posts = getPostsByPath('/posts');
+    // const posts = getPostsByPath('/posts');
 
     return (
         <>
             <section className='mx-auto flex w-fit flex-col items-center gap-y-4'>
                 <Avatar />
                 <MessageDialog
-                    message={posts.length > 0 ? MESSAGE : EMPTY_MESSAGE}
+                    // message={posts.length > 0 ? MESSAGE : EMPTY_MESSAGE}
+                    message={EMPTY_MESSAGE}
                     arrow='top'
                 />
             </section>
 
             <section>
                 <SectionHeader header='Posts' />
-                <ul className='mt-4 grid gap-x-4 gap-y-8 sm:grid-cols-2'>
-                    {posts.map((post: Post) => (
-                        <PostItem key={post.slug} post={post} route='posts' />
-                    ))}
-                </ul>
+                {/* <ul className='mt-4 grid gap-x-4 gap-y-8 sm:grid-cols-2'> */}
+                {/*     {posts.map((post: Post) => ( */}
+                {/*         <PostItem key={post.slug} post={post} route='posts' /> */}
+                {/*     ))} */}
+                {/* </ul> */}
             </section>
         </>
     );
