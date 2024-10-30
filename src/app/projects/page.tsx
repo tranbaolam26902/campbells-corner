@@ -2,8 +2,12 @@
 import type { Metadata } from 'next';
 
 // components
-import { ProjectItem } from './components';
-import { Avatar, MessageDialog, SectionHeader } from '@/components/index';
+import {
+    Avatar,
+    MessageDialog,
+    PostItem,
+    SectionHeader
+} from '@/components/index';
 
 // constants
 import { EMPTY_MESSAGE, MESSAGE, TITLE } from '@/constants/projects-constants';
@@ -40,7 +44,12 @@ export default function Page() {
                     <SectionHeader header='Client projects' />
                     <ul className='mt-4 grid gap-x-4 gap-y-8 sm:grid-cols-2'>
                         {clientProjects.map((project: Post) => (
-                            <ProjectItem key={project.slug} project={project} />
+                            <PostItem
+                                key={project.slug}
+                                post={project}
+                                route='projects'
+                                overlay
+                            />
                         ))}
                     </ul>
                 </section>
@@ -49,7 +58,12 @@ export default function Page() {
                     <SectionHeader header='Side projects' />
                     <ul className='mt-4 grid gap-x-4 gap-y-8 sm:grid-cols-2'>
                         {sideProjects.map((project: Post) => (
-                            <ProjectItem key={project.slug} project={project} />
+                            <PostItem
+                                key={project.slug}
+                                post={project}
+                                route='projects'
+                                overlay
+                            />
                         ))}
                     </ul>
                 </section>
