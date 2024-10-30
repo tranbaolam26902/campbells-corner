@@ -15,19 +15,14 @@ This is my personal website, where I introduce myself, showcase my projects, sha
 
 ```
 campbells-corner/
- │  # Post content files
- ├─ contents/
- │  # Static image, icon files
- ├─ public/
+ ├─ contents/ # Post content files
+ ├─ public/ # Static image, icon files
  └─ src/
-     │  # Route and Page files
-     ├─ app/
-     │  # React component files
-     ├─ components/
-     │  # Non - React files
-     ├─ libs/
-     │  # Utility functions and helper methods
-     └─ utils/
+     ├─ app/ # App router files
+     ├─ components/ # React component files
+     ├─ constants/ # Constants for pages and components
+     ├─ libs/ # Non-React files (types, actions, etc.)
+     └─ utils/ # Utility fuctions and helper methods
 ```
 
 *All page content is render automatically based on markdown files in the `contents/` folder.*
