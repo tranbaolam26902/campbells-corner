@@ -13,7 +13,7 @@ export const BIO: Array<Bio> = [
     },
     {
         time: '2024',
-        info: "Completed the Engineer's Porgram in Software Engineering at Dalat University"
+        info: "Completed the Engineer's Program in Software Engineering at Dalat University"
     }
 ];
 export const CONTACT: Array<Contact> = [
