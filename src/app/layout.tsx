@@ -10,8 +10,8 @@ import './globals.css';
 // components
 import {
     Header,
-    Container,
     Footer,
+    PageTransition,
     ScrollToTop,
     ThemeWrapper
 } from '@/components/index';
@@ -93,7 +93,7 @@ export default function RootLayout({
             >
                 <ThemeWrapper>
                     <Header />
-                    <Container>{children}</Container>
+                    <PageTransition>{children}</PageTransition>
                     <Footer />
                     <ScrollToTop />
                 </ThemeWrapper>

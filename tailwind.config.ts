@@ -9,16 +9,6 @@ const config: Config = {
     darkMode: 'class',
     theme: {
         extend: {
-            keyframes: {
-                loading: {
-                    to: {
-                        'clip-path': 'inset(0 -1ch 0 0)'
-                    }
-                }
-            },
-            animation: {
-                loading: 'loading 1s infinite linear alternate'
-            },
             fontFamily: {
                 futura: ['var(--font-futura)'],
                 'berkshire-swash': ['var(--font-berkshire-swash)']
