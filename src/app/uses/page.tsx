@@ -7,7 +7,7 @@ import {
     MessageDialog,
     // PostItem,
     SectionHeader
-} from '@/components/index';
+} from '@/components';
 
 // constants
 import { EMPTY_MESSAGE, MESSAGE, TITLE } from '@/constants/uses-constants';

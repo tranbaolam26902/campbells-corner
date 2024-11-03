@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 // components
-import { SectionHeader } from '@/components/index';
+import { SectionHeader } from '@/components';
 
 // constants
 import { CONTACT } from '@/constants/home-constants';

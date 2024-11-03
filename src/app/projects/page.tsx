@@ -2,12 +2,7 @@
 import type { Metadata } from 'next';
 
 // components
-import {
-    Avatar,
-    MessageDialog,
-    PostItem,
-    SectionHeader
-} from '@/components/index';
+import { Avatar, MessageDialog, PostItem, SectionHeader } from '@/components';
 
 // constants
 import { EMPTY_MESSAGE, MESSAGE, TITLE } from '@/constants/projects-constants';

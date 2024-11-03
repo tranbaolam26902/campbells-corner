@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
 // components
-import { Back, Markdown } from '@/components/index';
+import { Back, Markdown } from '@/components';
 
 // constants
 import { DYNAMIC_PROJECT_METADATA_DESCRIPTION } from '@/constants/projects-constants';

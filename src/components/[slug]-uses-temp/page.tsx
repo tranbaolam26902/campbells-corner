@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
 // components
-import { Back, Markdown } from '@/components/index';
+import { Back, Markdown } from '@/components';
 
 // utils
 import { readFileContent } from '@/utils/content-file-utils';

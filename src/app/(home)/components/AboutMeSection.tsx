@@ -1,5 +1,5 @@
 // components
-import { SectionHeader } from '@/components/index';
+import { SectionHeader } from '@/components';
 
 // constants
 import { ABOUT_ME } from '@/constants/home-constants';

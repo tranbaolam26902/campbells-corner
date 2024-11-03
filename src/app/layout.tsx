@@ -14,7 +14,7 @@ import {
     PageTransition,
     ScrollToTop,
     ThemeWrapper
-} from '@/components/index';
+} from '@/components';
 
 // constants
 import {

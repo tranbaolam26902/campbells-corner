@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 // components
-import { Avatar, MessageDialog } from '@/components/index';
+import { Avatar, MessageDialog } from '@/components';
 
 // constants
 import {

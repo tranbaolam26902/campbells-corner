@@ -1,5 +1,5 @@
 // components
-import { Avatar, MessageDialog } from '@/components/index';
+import { Avatar, MessageDialog } from '@/components';
 
 // constants
 import { MESSAGE, NAME } from '@/constants/home-constants';

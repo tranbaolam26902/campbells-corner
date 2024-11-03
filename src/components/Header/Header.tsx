@@ -4,7 +4,7 @@ import Link from 'next/link';
 // components
 import { NavItem } from './NavItem';
 import MobileMenu from './MobileMenu';
-import { ThemeSwitcher } from '@/components/index';
+import { ThemeSwitcher } from '@/components';
 
 // constants
 import { BRAND_NAME, NAV_LINKS } from '@/constants/global-constants';
