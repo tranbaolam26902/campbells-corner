@@ -17,6 +17,7 @@ export function NavItem({ href, name }: NavItemProps) {
         <Link
             role='menuitem'
             href={href}
+            scroll={false}
             className={`rounded px-2.5 py-0.5 font-medium underline-offset-4 ${pathname === href ? 'bg-secondary-100 dark:bg-secondary-base dark:text-background-base' : 'hover:underline'}`}
         >
             {name}
@@ -31,6 +32,7 @@ export function MobileNavItem({ href, name, onClick }: NavItemProps) {
         <Link
             role='menuitem'
             href={href}
+            scroll={false}
             className={`px-4 py-2 text-left font-medium underline-offset-4 ${pathname === href ? 'bg-secondary-100 dark:bg-secondary-base dark:text-background-base' : 'hover:bg-gray-100 dark:hover:bg-background-300'}`}
             onClick={onClick}
         >
