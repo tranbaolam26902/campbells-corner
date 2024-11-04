@@ -26,7 +26,7 @@ export default async function PostItem({
 
     return (
         <li className='text-center'>
-            <Link href={`/${route}/${post.slug}`}>
+            <Link href={`/${route}/${post.slug}`} scroll={false}>
                 <div className='relative'>
                     <Image
                         src={post.previewImg}
