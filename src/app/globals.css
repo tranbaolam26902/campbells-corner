@@ -136,10 +136,6 @@
         --accent-950: #ebe7fe;
     }
 
-    html {
-        scroll-behavior: smooth;
-    }
-
     body {
         color: var(--text);
         background: var(--background);
