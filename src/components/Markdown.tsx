@@ -47,10 +47,11 @@ export default function Markdown({ source }: MarkdownProps) {
                     <Image
                         src={props.src || ''}
                         alt='showcase image'
-                        width={2560}
-                        height={1440}
+                        width={736}
+                        height={414}
+                        sizes='(min-width: 1040px) 736px, (min-width: 780px) 640px, (min-width: 640px) 544px, calc(100vw - 32px)'
                         priority
-                        className='h-auto w-full rounded-xl shadow'
+                        className='rounded-xl shadow'
                     />
                 )
             }}

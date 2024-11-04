@@ -31,15 +31,16 @@ export default async function PostItem({
                     <Image
                         src={post.previewImg}
                         alt='thumbnail'
-                        width={2560}
-                        height={1440}
+                        width={592}
+                        height={333}
+                        sizes='(min-width: 1040px) 360px, (min-width: 780px) 312px, (min-width: 640px) 264px, (min-width: 420px) 360px, 92vw'
                         priority
                         placeholder='blur'
                         blurDataURL={base64}
-                        className='rounded-lg'
+                        className='rounded-lg shadow'
                     />
                     {overlay && (
-                        <div className='absolute inset-0 flex items-center justify-center rounded-lg bg-black bg-opacity-50 text-3xl font-bold uppercase leading-10 text-white drop-shadow-md'>
+                        <div className='absolute inset-0 flex items-center justify-center rounded-lg bg-black bg-opacity-50 text-3xl font-bold uppercase leading-10 text-white drop-shadow-md sm:text-xl md:text-2xl lg:text-3xl'>
                             {post.name}
                         </div>
                     )}
