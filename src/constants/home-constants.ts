@@ -5,7 +5,7 @@ export const TITLE = 'Homepage';
 export const NAME = 'Tran "Campbell" Bao Lam';
 export const MESSAGE = 'Hi, welcome to my space on the internet!';
 export const ABOUT_ME =
-    'I am a software engineer with a passion for building digital products. I have around two years of experience in front-end web development, primarily focusing on React applications. I also concentrate on enhancing the UI/UX of the products I create, ensuring they are not only functional but also intuitive and visually appealing.';
+    'I am a software engineer with a passion for building digital products. I have around two years of experience in front-end web development, primarily focusing on React applications. I always focus on enhancing the UI/UX of the products I create, ensuring they are not only functional but also intuitive and visually appealing.';
 export const BIO: Array<Bio> = [
     {
         time: '2002',
