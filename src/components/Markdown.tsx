@@ -1,17 +1,12 @@
-'use server';
-
 // packages
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Image from 'next/image';
-import fs from 'node:fs/promises';
-import path from 'node:path';
-import { getPlaiceholder } from 'plaiceholder';
 
 interface MarkdownProps {
     source: string;
 }
 
-export default async function Markdown({ source }: MarkdownProps) {
+export default function Markdown({ source }: MarkdownProps) {
     return (
         <MDXRemote
             source={source}
@@ -48,26 +43,17 @@ export default async function Markdown({ source }: MarkdownProps) {
                         {props.children}
                     </a>
                 ),
-                img: async (props) => {
-                    const buffer = await fs.readFile(
-                        path.resolve('public' + props.src)
-                    );
-                    const { base64 } = await getPlaiceholder(buffer);
-
-                    return (
-                        <Image
-                            src={props.src || ''}
-                            alt='showcase image'
-                            width={736}
-                            height={414}
-                            placeholder='blur'
-                            blurDataURL={base64}
-                            sizes='(min-width: 1040px) 736px, (min-width: 780px) 640px, (min-width: 640px) 544px, calc(100vw - 32px)'
-                            priority
-                            className='rounded-xl shadow'
-                        />
-                    );
-                }
+                img: (props) => (
+                    <Image
+                        src={props.src || ''}
+                        alt='showcase image'
+                        width={736}
+                        height={414}
+                        sizes='(min-width: 1040px) 736px, (min-width: 780px) 640px, (min-width: 640px) 544px, calc(100vw - 32px)'
+                        priority
+                        className='rounded-xl shadow'
+                    />
+                )
             }}
         />
     );
