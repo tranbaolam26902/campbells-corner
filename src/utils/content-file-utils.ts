@@ -55,13 +55,13 @@ export function convertFileNameIntoName(fileName: string): string {
  */
 export function mapFilesIntoPosts(path: string): Array<Post> {
     const postItems = fs
-        .readdirSync(nodePath.join(process.cwd(), `/content${path}`))
+        .readdirSync(nodePath.join(process.cwd(), `/public/contents${path}`))
         .map((file) => {
             const fileName = getFileName(file);
             const name = convertFileNameIntoName(fileName);
             const filePath = nodePath.join(
                 process.cwd(),
-                `/content${path}/${file}`
+                `/public/contents${path}/${file}`
             );
             const previewImg = `/images${path}/${fileName.toLowerCase()}-thumbnail.png`;
 
