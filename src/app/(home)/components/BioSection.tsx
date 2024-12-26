@@ -12,10 +12,11 @@ export default function BioSection() {
                 {BIO.map((item, index) => (
                     <li
                         key={index}
-                        className='flex gap-x-4 break-words text-justify'
+                        className='grid grid-cols-[112px,auto,1fr] gap-x-2 break-words text-justify'
                     >
-                        <span>{item.time}</span>
-                        <span>{item.info}</span>
+                        <span className='text-end'>{item.time}</span>
+                        <span>-</span>
+                        <span className='break-words'>{item.info}</span>
                     </li>
                 ))}
             </ul>

@@ -12,8 +12,16 @@ export const BIO: Array<Bio> = [
         info: 'Born in Dalat City, Vietnam'
     },
     {
+        time: '2022 ~ 2024',
+        info: 'Worked as a Freelance Front-end Web Developer'
+    },
+    {
         time: '2024',
         info: "Completed the Engineer's Program in Software Engineering at Dalat University"
+    },
+    {
+        time: '2024 ~ Present',
+        info: 'Working as a Front-end Web Developer at DLS - VN'
     }
 ];
 export const CONTACT: Array<Contact> = [
